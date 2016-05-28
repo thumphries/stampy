@@ -1,0 +1,26 @@
+name:                  stampy
+version:               0.1.0.0
+synopsis:              Hokey flashcard thing
+homepage:              https://github.com/thumphries/stampy
+license:               AllRightsReserved
+license-file:          LICENSE
+author:                Tim Humphries
+maintainer:            tim@utf8.me
+category:              Web
+build-type:            Simple
+cabal-version:         >=1.10
+-- extra-source-files:  
+
+library
+  default-language:    Haskell2010
+  hs-source-dirs:      src
+  exposed-modules:
+  other-modules:
+  build-depends:       base >= 4.8 && <4.9
+
+executable stampy
+  default-language:    Haskell2010
+  hs-source-dirs:      main
+  main-is:             Main.hs
+  build-depends:       base >=4.8 && <4.9,
+                       stampy
