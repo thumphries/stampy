@@ -11,6 +11,8 @@ build-type:            Simple
 cabal-version:         >=1.10
 extra-source-files:    static/jquery.console.js
 
+Tested-With:           GHC == 7.10.3
+
 library
 
   default-language:
