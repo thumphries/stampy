@@ -13,9 +13,14 @@ extra-source-files:    static/jquery.console.js
 
 library
 
-  default-language:    Haskell2010
+  default-language:
+                       Haskell2010
 
-  hs-source-dirs:      src
+  ghc-options:
+                       -Wall
+
+  hs-source-dirs:
+                       src
 
   exposed-modules:
                        Stampy
@@ -39,12 +44,18 @@ library
 
 executable stampy
 
-  default-language:    Haskell2010
+  default-language:
+                       Haskell2010
 
-  hs-source-dirs:      main
+  main-is:
+                       main/stampy.hs
 
-  main-is:             Main.hs
+  ghc-options:
+                       -Wall -threaded -O2
+                       -rtsopts -with-rtsopts "-T -N"
 
   build-depends:       base >=4.8              && <4.9
+                     , ambiata-p
+                     , ambiata-x-eithert
                      , stampy
                      , warp == 3.2.*
