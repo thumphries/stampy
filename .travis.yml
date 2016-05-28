@@ -9,8 +9,6 @@ git:
 
 cache:
   directories:
-    - $HOME/.cabal/packages
-    - $HOME/.cabal/store
     - $HOME/.ambiata
 
 before_cache:
